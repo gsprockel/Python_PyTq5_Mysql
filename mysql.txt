@@ -1,0 +1,59 @@
+CREATE TABLE gs_clientes(
+    gs_id bigint not null AUTO_INCREMENT PRIMARY key,
+    gs_nombre varchar(50) not null,
+    gs_cedula char(14) not null,
+    gs_fechanacimiento date,
+    genero enum('Masculino','Femenino','otro'),
+    gs_correo varchar(50),
+    gs_direccion varchar(50),
+    gs_telefono varchar(50)
+    )
+
+CREATE TABLE gs_productos(
+    gs_idproducto int not null AUTO_INCREMENT PRIMARY KEY,
+    gs_nombre varchar(50) not null,
+    gs_marca varchar(50) not null,
+    gs_precio float not null,
+    gs_stockmin int not null,
+    gs_cantidad int not null
+    
+    )
+
+CREATE TABLE gs_ventas(
+    gs_idventas int not null AUTO_INCREMENT PRIMARY KEY,
+    gs_fechaventa datetime NOT null,
+    gs_subtotal float not null,
+    gs_impuesto float not null,
+    gs_descuento float not null,
+    gs_total float not null
+    )
+
+CREATE TABLE IF NOT EXISTS `mydb`.`gs_clientes_has_gs_ventas` (
+  `gs_clientes_gs_id` INT NOT NULL,
+  `gs_ventas_gs_idventas` INT NOT NULL,
+  `gs_productos_gs_idproducto` INT NOT NULL,
+  `gs_cantidad` INT NULL,
+  `gs_valorunitario` FLOAT NULL,
+  PRIMARY KEY (`gs_clientes_gs_id`, `gs_ventas_gs_idventas`),
+  CONSTRAINT `fk_gs_clientes_has_gs_ventas_gs_clientes`
+    FOREIGN KEY (`gs_clientes_gs_id`)
+    REFERENCES `mydb`.`gs_clientes` (`gs_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_gs_clientes_has_gs_ventas_gs_ventas1`
+    FOREIGN KEY (`gs_ventas_gs_idventas`)
+    REFERENCES `mydb`.`gs_ventas` (`gs_idventas`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_gs_clientes_has_gs_ventas_gs_productos1`
+    FOREIGN KEY (`gs_productos_gs_idproducto`)
+    REFERENCES `mydb`.`gs_productos` (`gs_idproducto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+
+
+Agregar Productos
+Ver Productos
+Actualizar Productos
+Eliminar Productos 

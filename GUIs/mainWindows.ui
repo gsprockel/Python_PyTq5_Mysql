@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>427</width>
+    <height>293</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>427</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCLIENTES">
+    <property name="title">
+     <string>CLIENTES</string>
+    </property>
+    <addaction name="actionAgregar_Clientes"/>
+    <addaction name="actionVer_Clientes"/>
+    <addaction name="actionActualizar_CLientes"/>
+    <addaction name="actionEliminar_Clientes"/>
+   </widget>
+   <widget class="QMenu" name="menuPRODUCTOS">
+    <property name="title">
+     <string>PRODUCTOS</string>
+    </property>
+    <addaction name="actionAgregar_Productos"/>
+    <addaction name="actionVer_Productos"/>
+    <addaction name="actionActualizar_Productos"/>
+    <addaction name="actionEliminar_Productos"/>
+   </widget>
+   <widget class="QMenu" name="menuVENTAS">
+    <property name="title">
+     <string>VENTAS</string>
+    </property>
+    <addaction name="actionAgregar_Venta"/>
+    <addaction name="actionLeer_Ventas"/>
+    <addaction name="actionActualizar_Ventas"/>
+    <addaction name="actionEliminar_Ventas"/>
+   </widget>
+   <addaction name="menuCLIENTES"/>
+   <addaction name="menuPRODUCTOS"/>
+   <addaction name="menuVENTAS"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAgregar_Clientes">
+   <property name="text">
+    <string>Agregar Clientes</string>
+   </property>
+  </action>
+  <action name="actionVer_Clientes">
+   <property name="text">
+    <string>Ver Clientes</string>
+   </property>
+  </action>
+  <action name="actionActualizar_CLientes">
+   <property name="text">
+    <string>Actualizar CLientes</string>
+   </property>
+  </action>
+  <action name="actionEliminar_Clientes">
+   <property name="text">
+    <string>Eliminar Clientes</string>
+   </property>
+  </action>
+  <action name="actionAgregar_Productos">
+   <property name="text">
+    <string>Agregar Productos</string>
+   </property>
+  </action>
+  <action name="actionVer_Productos">
+   <property name="text">
+    <string>Ver Productos</string>
+   </property>
+  </action>
+  <action name="actionActualizar_Productos">
+   <property name="text">
+    <string>Actualizar Productos</string>
+   </property>
+  </action>
+  <action name="actionEliminar_Productos">
+   <property name="text">
+    <string>Eliminar Productos </string>
+   </property>
+  </action>
+  <action name="actionAgregar_Venta">
+   <property name="text">
+    <string>Agregar Venta</string>
+   </property>
+  </action>
+  <action name="actionLeer_Ventas">
+   <property name="text">
+    <string>Leer Ventas</string>
+   </property>
+  </action>
+  <action name="actionActualizar_Ventas">
+   <property name="text">
+    <string>Actualizar Ventas</string>
+   </property>
+  </action>
+  <action name="actionEliminar_Ventas">
+   <property name="text">
+    <string>Eliminar Ventas</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
